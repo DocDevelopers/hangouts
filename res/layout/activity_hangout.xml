@@ -1,0 +1,42 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="horizontal">
+    
+    
+    <VideoView 
+        android:id="@+id/stream"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        />
+    
+
+    
+    
+	    <TextView
+	         android:id="@+id/title"
+	         android:gravity="center"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="215dp"
+	        android:text="@string`/title"
+	        android:textSize="20dp"
+	       android:typeface="monospace"
+	        
+	        />
+	    
+	    	    <TextView
+	         android:id="@+id/desc"
+	         android:gravity="center"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="250dp"
+	        android:text="@string/desc"
+	       
+	        
+	        />
+ "
+ 
+ </RelativeLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Hangouts</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title">Youtube Video!!!</string>
+     <string name="desc">This is the description.Text/Text/Text/Text/Text/Text/Text/Text/</string>
+
+</resources>
