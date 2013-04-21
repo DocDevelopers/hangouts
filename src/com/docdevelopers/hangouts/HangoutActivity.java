@@ -15,7 +15,8 @@ import android.widget.VideoView;
 public class HangoutActivity extends Activity {
 	
 	//Variables
-	String video = "http://www.docdevelopers.com/stevegreene.mp4";
+	String video = "http://youtu.be/tUeXp_It1KE";
+	
 	public VideoView stream;
 	
 	
