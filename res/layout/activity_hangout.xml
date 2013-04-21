@@ -2,7 +2,9 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+   
+    >
     
     
     <VideoView 
@@ -17,24 +19,26 @@
     
 	    <TextView
 	         android:id="@+id/title"
-	         android:gravity="center"
+	         android:gravity="left"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_marginTop="215dp"
+	        android:layout_marginTop="218dp"
 	        android:text="@string/title"
 	        android:textSize="20dp"
+	       
+	       android:layout_marginLeft="2dp"
 	       android:typeface="monospace"
 	        
 	        />
 	    
 	    	    <TextView
 	         android:id="@+id/desc"
-	         android:gravity="center"
+	         android:gravity="left"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
 	        android:layout_marginTop="250dp"
 	        android:text="@string/desc"
-	       
+	       android:layout_marginLeft="2dp"
 	        
 	        />
  "
