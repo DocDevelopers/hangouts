@@ -36,11 +36,39 @@
 	         android:gravity="left"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:layout_marginTop="250dp"
+	        android:layout_marginTop="240dp"
 	        android:text="@string/desc"
 	       android:layout_marginLeft="2dp"
 	        
 	        />
- "
+	    	    
+	    	    
+	    	    <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="295dp"
+            android:background="#696969" > 
+        </LinearLayout>
+        
+	    	       <TextView
+	         android:id="@+id/comments"
+	         android:gravity="left"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="298dp"
+	        android:text="Comments:"
+	       android:layout_marginLeft="2dp"
+	        
+	        />
+	    	       
+	    	        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="320dp"
+            android:background="#696969" > 
+        </LinearLayout>
+	    	    
+ <ListView android:id="@+id/listView1" android:layout_height="fill_parent"
+		android:layout_width="fill_parent" android:layout_marginTop="320dp"></ListView>
  
  </RelativeLayout>
