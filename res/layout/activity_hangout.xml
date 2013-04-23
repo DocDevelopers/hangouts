@@ -7,14 +7,16 @@
     >
     
     
-    <VideoView 
-        android:id="@+id/stream"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:layout_marginTop="5dp"
-        />
     
-
+    <WebView
+  android:id="@+id/webView1"
+  android:layout_width="match_parent"
+  android:layout_height="198dp"
+  android:layout_alignParentLeft="true"
+  android:layout_gravity="top"
+  android:layout_weight="0.87" />
+    
+  
     
     
 	    <TextView
@@ -56,7 +58,7 @@
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
 	        android:layout_marginTop="298dp"
-	        android:text="Comments:"
+	        android:text="@string/comments"
 	       android:layout_marginLeft="2dp"
 	        
 	        />

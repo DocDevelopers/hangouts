@@ -13,6 +13,8 @@ import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 import org.xmlpull.v1.XmlPullParserFactory;
 
+
+
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -23,11 +25,13 @@ import android.content.Intent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.webkit.WebChromeClient;
+import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.MediaController;
 import android.widget.VideoView;
 import android.widget.AdapterView.OnItemClickListener;
 
@@ -54,20 +58,32 @@ public class HangoutActivity extends Activity implements OnItemClickListener {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_hangout);
 		//Identify Devices
-		VideoView stream = (VideoView) findViewById(R.id.stream);
-		MediaController mediaController = new MediaController(this);
+		//VideoView stream = (VideoView) findViewById(R.id.stream);
+		//MediaController mediaController = new MediaController(this);
 		
+		
+		WebView w = (WebView)findViewById(R.id.webView1);
+	 	w.setWebViewClient(new WebViewClient());
+	 	
+	 	w.getSettings().setJavaScriptEnabled(true);
+	 	w.setVerticalScrollBarEnabled(false);
+	 	w.setHorizontalScrollBarEnabled(false);
+
+	String customHtml = "<html><body leftmargin=\"0\" topmargin=\"0\" rightmargin=\"0\" bottommargin=\"0\"><iframe width=\"100%\" height=\"100%\" src=\"http://www.youtube.com/embed/mOnrkfA6Vw0\" frameborder=\"0\" allowfullscreen></iframe></body></html>";
+	w.setWebChromeClient(new WebChromeClient() {
+	});
+	w.loadData(customHtml, "text/html", "UTF-8");
 		//Parsing URL
-		Uri src = Uri.parse(video); 
+		//Uri src = Uri.parse(video); 
 		 mListView = (ListView) findViewById(R.id.listView1);
 		 mListView.setTextFilterEnabled(true);
 		  LoadRecipesTask1 mLoadRecipesTask = new LoadRecipesTask1();
-          mLoadRecipesTask.execute("http://gdata.youtube.com/feeds/api/videos/UuMTSU9DcqQ/comments");
+          mLoadRecipesTask.execute("http://gdata.youtube.com/feeds/api/videos/mOnrkfA6Vw0/comments");
 		
 		//VideoView
-		stream.setVideoURI(src);
-		stream.setMediaController(mediaController);
-		stream.start();
+		//stream.setVideoURI(src);
+		//stream.setMediaController(mediaController);
+		//stream.start();
 		
 	}
 	
@@ -78,22 +94,7 @@ public class HangoutActivity extends Activity implements OnItemClickListener {
 	 * the activity
 	 */
 	
-	public void onDestroy(){
-		
-		super.onDestroy();
-		VideoView stream = (VideoView) findViewById(R.id.stream);
-		stream.pause();
-		
-	}
-	
-	public void onStart(){
-		
-		super.onStart();
-		VideoView stream = (VideoView) findViewById(R.id.stream);
-		stream.resume();
-	}
-	
-	
+
 	
 	//Menu
 	@Override

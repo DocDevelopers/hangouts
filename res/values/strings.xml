@@ -6,6 +6,7 @@
     <string name="action_exit">Exit</string>
     <string name="hello_world">Hello world!</string>
     <string name="title"><strong><u>Khan Academy on the Gates Notes</u></strong></string>
-     <string name="desc">Streamed on: 4/20/2013 \nLearn more:<a href="#">http://www.khanacademy.org/video?v=Uu.....</a>  \nBill Gates talks about the Khan Academy on the Gates Notes</string>
-
+    <string name="desc">Streamed on: 4/20/2013 \nLearn more:<a href="#">http://www.khanacademy.org/video?v=Uu.....</a>  \nBill Gates talks about the Khan Academy on the Gates Notes</string>
+    <string name="comments">Comments:</string>
+	
 </resources>
